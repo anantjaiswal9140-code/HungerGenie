@@ -1,44 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HungerGenie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/HungerGenie Logo.png" alt="Logo">
+                    <span class="logo-text">HungerGenie</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="restaurants.html">Restaurants</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
         <section class="page">
             <div class="container">
                 <div class="page-content">
                     <h1>Contact Us</h1>
-                    <p>Have questions or feedback? We'd love to hear from you! Get in touch with our team.</p>
+                    <p>Have questions or feedback? We'd love to hear from you! Get in touch with our team and we'll respond as soon as possible.</p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0;">
-                        <div>
-                            <h3 style="margin-bottom: 20px; color: #ff6b6b;">Get in Touch</h3>
-                            <p><strong>Email:</strong> support@hungergenie.com</p>
-                            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                            <p><strong>Address:</strong> 123 Food Street, Delivery City, DC 12345</p>
-                            <p><strong>Hours:</strong> 24/7 Customer Support</p>
+                    <div class="contact-grid">
+                        <div class="contact-section">
+                            <h3 class="contact-heading">Get in Touch</h3>
+                            <p class="contact-info"><strong> Email:</strong><br>support@hungergenie.com</p>
+                            <p class="contact-info"><strong> Phone:</strong><br>+1 (555) 123-4567</p>
+                            <p class="contact-info"><strong> Address:</strong><br>123 Food Street, Delivery City, DC 12345</p>
+                            <p class="contact-info"><strong> Hours:</strong><br>24/7 Customer Support</p>
                             
-                            <h3 style="margin-top: 30px; margin-bottom: 15px; color: #ff6b6b;">Follow Us</h3>
-                            <div style="display: flex; gap: 15px;">
-                                <a href="#" style="color: #ff6b6b; font-size: 1.5rem; text-decoration: none;">&#x1F4E7; Facebook</a>
-                                <a href="#" style="color: #ff6b6b; font-size: 1.5rem; text-decoration: none;">&#x1F4E6; Twitter</a>
-                                <a href="#" style="color: #ff6b6b; font-size: 1.5rem; text-decoration: none;">&#x1F4F7; Instagram</a>
+                            <h3 class="contact-heading follow-heading">Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link"> Facebook</a>
+                                <a href="#" class="social-link"> Twitter</a>
+                                <a href="#" class="social-link"> Instagram</a>
                             </div>
-                        </div>
-                        
-                        <div>
-                            <h3 style="margin-bottom: 20px; color: #ff6b6b;">Send us a Message</h3>
-                            <form class="contact-form">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" required></textarea>
-                                </div>
-                                <button type="submit" class="submit-btn">Send Message</button>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HungerGenie. Delivering happiness, one meal at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>
