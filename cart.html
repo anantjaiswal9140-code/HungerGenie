@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - HungerGenie</title>
+    <title>Cart - HungerGenie</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -31,24 +31,41 @@
     </header>
 
     <main>
-        <section class="page">
-            <div class="page-content">
-                <h1>Contact Us</h1>
-                <p>Have questions or feedback? We'd love to hear from you! Get in touch with our team and we'll respond as soon as possible.</p>
-                <h3>Get in Touch</h3>
-                <p><strong>Email:</strong><br>support@hungergenie.com</p>
-                <p><strong>Phone:</strong><br>+1 (555) 123-4567</p>
-                <p><strong>Address:</strong><br>123 Food Street, Delivery City, DC 12345</p>
-                <p><strong>Hours:</strong><br>24/7 Customer Support</p>
-                <h3 style="margin-top: 30px;">Follow Us</h3>
-                <div>
-                    <a href="#">Facebook</a> | 
-                    <a href="#">Twitter</a> | 
-                    <a href="#">Instagram</a>
+        <section class="cart-section">
+            <div class="container">
+                <h1 class="cart-title">Your Cart</h1>
+                <div class="cart-content">
+                    <div class="cart-items">
+                        <!-- Cart items will be dynamically loaded here -->
+                    </div>
+
+                    <div class="cart-summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotalAmount">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery Charge:</span>
+                            <span>$2.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="totalAmount">$0.00</span>
+                        </div>
+                        <button class="checkout-btn">Proceed to Checkout</button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HungerGenie. Delivering happiness, one meal at a time.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

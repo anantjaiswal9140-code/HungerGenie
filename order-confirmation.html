@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - HungerGenie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/HungerGenie Logo.png" alt="Logo">
+                    <span class="logo-text">HungerGenie</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="restaurants.html">Restaurants</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="confirmation-section">
+            <div class="container">
+                <div class="confirmation-content">
+                    <!-- Success Icon with Animation -->
+                    <div class="success-icon-container">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="success-circle"></div>
+                    </div>
+
+                    <!-- Confirmation Message -->
+                    <h1 class="confirmation-title">Order Confirmed!</h1>
+                    <p class="confirmation-message">Thank you for your order. We've received your order and will start preparing it right away.</p>
+
+                    <!-- Order Details -->
+                    <div id="orderDetails" class="order-details-card">
+                        <!-- Order details will be loaded dynamically -->
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="confirmation-actions">
+                        <a href="index.html" class="btn btn-primary">
+                            <i class="fas fa-home"></i> Back to Home
+                        </a>
+                        <a href="products.html" class="btn btn-secondary">
+                            <i class="fas fa-shopping-bag"></i> Continue Shopping
+                        </a>
+                    </div>
+
+                    <!-- Estimated Delivery Info -->
+                    <div class="delivery-info">
+                        <i class="fas fa-clock"></i>
+                        <p>Estimated delivery time: <strong>30-45 minutes</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HungerGenie. Delivering happiness, one meal at a time.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

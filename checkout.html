@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - HungerGenie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/HungerGenie Logo.png" alt="Logo">
+                    <span class="logo-text">HungerGenie</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="restaurants.html">Restaurants</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout-section">
+            <div class="container">
+                <h1 class="checkout-title">Checkout</h1>
+                <div class="checkout-content">
+                    <div class="checkout-form-container">
+                        <form id="checkout-form" class="checkout-form">
+                            <!-- Delivery Address Section -->
+                            <div class="form-section">
+                                <h2><i class="fas fa-map-marker-alt"></i> Delivery Address</h2>
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Street Address *</label>
+                                    <input type="text" id="address" name="address" required placeholder="123 Main Street">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">City *</label>
+                                        <input type="text" id="city" name="city" required placeholder="New York">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State *</label>
+                                        <input type="text" id="state" name="state" required placeholder="NY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zipCode">ZIP Code *</label>
+                                        <input type="text" id="zipCode" name="zipCode" required placeholder="10001">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryInstructions">Delivery Instructions (Optional)</label>
+                                    <textarea id="deliveryInstructions" name="deliveryInstructions" rows="3" placeholder="Leave at door, Ring bell, etc."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method Section -->
+                            <div class="form-section">
+                                <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+                                <div class="payment-options">
+                                    <div class="payment-option">
+                                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                                        <label for="creditCard" class="payment-label">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Credit Card</span>
+                                        </label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" id="debitCard" name="paymentMethod" value="debitCard">
+                                        <label for="debitCard" class="payment-label">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Debit Card</span>
+                                        </label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                        <label for="paypal" class="payment-label">
+                                            <i class="fab fa-paypal"></i>
+                                            <span>PayPal</span>
+                                        </label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery">
+                                        <label for="cashOnDelivery" class="payment-label">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                            <span>Cash on Delivery</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Card Details (shown when credit/debit card is selected) -->
+                                <div id="cardDetails" class="card-details">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card Number *</label>
+                                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiryDate">Expiry Date *</label>
+                                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV *</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardName">Name on Card *</label>
+                                        <input type="text" id="cardName" name="cardName" placeholder="John Doe">
+                                    </div>
+                                </div>
+
+                                <!-- PayPal QR Code (shown when PayPal is selected) -->
+                                <div id="paypalQrCode" class="paypal-qr-section">
+                                    <div class="qr-code-container">
+                                        <h4><i class="fab fa-paypal"></i> Scan to Pay with PayPal</h4>
+                                        <div id="qrCodeCanvas" class="qr-code-canvas"></div>
+                                        <p class="qr-instructions">Scan this QR code with your PayPal app to complete the payment</p>
+                                        <p class="qr-amount">Amount: <strong id="qrAmount">$0.00</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary Sidebar -->
+                    <div class="checkout-summary">
+                        <h2>Order Summary</h2>
+                        <div id="checkout-items" class="checkout-items">
+                            <!-- Items will be loaded dynamically -->
+                        </div>
+                        <div class="checkout-totals">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Charge:</span>
+                                <span>$2.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="checkout-total">$0.00</span>
+                            </div>
+                        </div>
+                        <button type="submit" form="checkout-form" class="place-order-btn">
+                            <i class="fas fa-lock"></i> Place Order
+                        </button>
+                        <a href="cart.html" class="back-to-cart-link">
+                            <i class="fas fa-arrow-left"></i> Back to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HungerGenie. Delivering happiness, one meal at a time.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

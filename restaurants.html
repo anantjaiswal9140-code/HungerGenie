@@ -18,18 +18,124 @@
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="restaurants.html">Restaurants</a>
+                    <a href="products.html">Products</a>
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact</a>
+                    <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="page">
+        <section class="restaurants-section">
             <div class="container">
-                <div class="page-content coming-soon-content">
-                    <h2 class="coming-soon-heading text-center">Coming soon...</h2>
+                <h1 class="restaurants-title">Explore Restaurants</h1>
+                <div class="restaurants-grid">
+                    <div class="restaurant-card">
+                        <div class="restaurant-image">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/01/8d/17/good-service-for-a-change.jpg?w=900&h=-1&s=1" alt="Burger King">
+                            <span class="restaurant-badge">4.8 ⭐</span>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>Burger King</h3>
+                            <p class="restaurant-cuisine">Fast Food • American</p>
+                            <p class="restaurant-description">Flame-grilled burgers and crispy fries</p>
+                            <div class="restaurant-meta">
+                                <span class="delivery-time"><i class="fas fa-clock"></i> 25-30 min</span>
+                                <span class="delivery-fee"><i class="fas fa-motorcycle"></i> $2.00</span>
+                            </div>
+                            <button class="order-btn">Order Now</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/e0/ef/11/restaurant.jpg?w=900&h=500&s=1" alt="Pizza Palace">
+                            <span class="restaurant-badge">4.6 ⭐</span>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>Pizza Palace</h3>
+                            <p class="restaurant-cuisine">Italian • Pizza</p>
+                            <p class="restaurant-description">Authentic Italian pizzas with fresh ingredients</p>
+                            <div class="restaurant-meta">
+                                <span class="delivery-time"><i class="fas fa-clock"></i> 30-35 min</span>
+                                <span class="delivery-fee"><i class="fas fa-motorcycle"></i> $2.50</span>
+                            </div>
+                            <button class="order-btn">Order Now</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPvOOBPYO1SSBNNmmimDZcBdOIxGBfLtjMFg&s" alt="Sushi House">
+                            <span class="restaurant-badge">4.9 ⭐</span>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>Sushi House</h3>
+                            <p class="restaurant-cuisine">Japanese • Sushi</p>
+                            <p class="restaurant-description">Premium sushi and authentic Japanese cuisine</p>
+                            <div class="restaurant-meta">
+                                <span class="delivery-time"><i class="fas fa-clock"></i> 35-40 min</span>
+                                <span class="delivery-fee"><i class="fas fa-motorcycle"></i> $3.00</span>
+                            </div>
+                            <button class="order-btn"><a href="/demo.html">Order Now</a></button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/465961977.jpg?k=7f6008843aed8a0c3496287d73f7d54a585ad591b2a5bcd13164ef59516b73dc&o=" alt="Pasta Primo">
+                            <span class="restaurant-badge">4.7 ⭐</span>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>Pasta Primo</h3>
+                            <p class="restaurant-cuisine">Italian • Pasta</p>
+                            <p class="restaurant-description">Handmade pasta with traditional Italian sauces</p>
+                            <div class="restaurant-meta">
+                                <span class="delivery-time"><i class="fas fa-clock"></i> 28-32 min</span>
+                                <span class="delivery-fee"><i class="fas fa-motorcycle"></i> $2.00</span>
+                            </div>
+                            <button class="order-btn">Order Now</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image">
+                            <img src="https://www.edelman.com/sites/g/files/aatuss191/files/2020-05/Hotel%20Exterior.jpg" alt="Taco Fiesta">
+                            <span class="restaurant-badge">4.5 ⭐</span>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>Taco Fiesta</h3>
+                            <p class="restaurant-cuisine">Mexican • Tacos</p>
+                            <p class="restaurant-description">Authentic Mexican street food and tacos</p>
+                            <div class="restaurant-meta">
+                                <span class="delivery-time"><i class="fas fa-clock"></i> 20-25 min</span>
+                                <span class="delivery-fee"><i class="fas fa-motorcycle"></i> $1.50</span>
+                            </div>
+                            <button class="order-btn">Order Now</button>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-card">
+                        <div class="restaurant-image">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/85/4b/20/this-is-our-beautiful.jpg?w=900&h=500&s=1" alt="Sweet Treats">
+                            <span class="restaurant-badge">4.8 ⭐</span>
+                        </div>
+                        <div class="restaurant-info">
+                            <h3>Sweet Treats</h3>
+                            <p class="restaurant-cuisine">Desserts • Bakery</p>
+                            <p class="restaurant-description">Delicious cakes, pastries, and desserts</p>
+                            <div class="restaurant-meta">
+                                <span class="delivery-time"><i class="fas fa-clock"></i> 15-20 min</span>
+                                <span class="delivery-fee"><i class="fas fa-motorcycle"></i> $1.00</span>
+                            </div>
+                            <button class="order-btn">Order Now</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -40,5 +146,7 @@
             <p>&copy; 2025 HungerGenie. Delivering happiness, one meal at a time.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
